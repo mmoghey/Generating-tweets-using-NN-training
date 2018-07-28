@@ -1,0 +1,19 @@
+Vocab pruned: 49258 -> 17261
+Training on: trump
+Train 36008, val: 9002, val ext: 45010
+Epoch 0 train		loss 3.87
+Epoch 0 val		loss 2.85
+Epoch 0 val_ext		loss 2.71
+We will will make make more more RT RT @AnnCoulter @AnnCoulter"" Tom Tom killed killed https://t.co/ANvTcZqfOq numerous nice
+Epoch 1 train		loss 2.53
+Epoch 1 val		loss 2.49
+Epoch 1 val_ext		loss 2.33
+We will will make make there there <eos>
+Epoch 2 train		loss 2.22
+Epoch 2 val		loss 2.18
+Epoch 2 val_ext		loss 2.16
+We will will have have on on @TeamCavuto @TeamCavuto @TeamCavuto very very @kwrcrow @kwrcrow.. <eos>
+Epoch 3 train		loss 2.11
+Epoch 3 val		loss 2.31
+Epoch 3 val_ext		loss 2.10
+We will will be military military yesterday yesterday. his his Congressman Congressman agreements harder harder.. <eos>

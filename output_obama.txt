@@ -1,0 +1,13 @@
+Training on: obama
+Train 17880, val: 4469, val ext: 45010
+Epoch 0 train		loss 4.54
+Epoch 0 val		loss 3.25
+Epoch 0 val_ext		loss 4.42
+We will Cheryl leadership leadership He'll foundations #RenewUI years the the at at at, <unk> <unk> bold designates runs
+Epoch 1 train		loss 2.70
+Epoch 1 val		loss 2.52
+Epoch 1 val_ext		loss 3.96
+We will will high-tech Arrival Arrival Arrival Senate what respond respond::"" We a a bit bit
+Epoch 2 train		loss 2.33
+Epoch 2 val_ext		loss 3.85
+We will will #ActOnClimate #ActOnClimate around around the the right right the the min min <eos>
