@@ -134,11 +134,7 @@ class TwitterFileArchiveDataset(LanguageModelDataset):
         :param filename: The path to the file
         :return: A list of lists of tokens, e.g. [ [I, am, great, ...], [It, is, going, to, ...], ...]
         """
-        ##############################
-        ### Insert your code below ###
-        # open the file, read it line by line, and tokenize using the TweetTokenizer class
-        # tweets should be a list of tweets' tokens (i.e. a list of lists of tokens - see the README)
-        ##############################
+        
         tweets=[]
         f = open(filename)
         raw = f.read() 
@@ -148,10 +144,5 @@ class TwitterFileArchiveDataset(LanguageModelDataset):
           tknzr = TweetTokenizer()
           tokenized_tweet=tknzr.tokenize(each_sentence)
           tweets.append(tokenized_tweet)
-          #print (tokenized_tweet)
-        #raise NotImplementedError()
-        #print (tweets)
-        ###############################
-        ### Insert your code above ####
-        ###############################
+          
         return tweets
