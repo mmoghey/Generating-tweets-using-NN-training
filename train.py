@@ -25,21 +25,12 @@ class NeuralLanguageModel(torch.nn.Module):
         self.init_token = init_token
         self.eos_token = eos_token
 
-        ##############################
-        ### Insert your code below ###
-        # create an embeding layer, a GRU cell, and the output projection layer
-        ##############################
         self.embedding = torch.nn.Embedding (vocab_size, embedding_size)
         self.gru = torch.nn.GRUCell(embedding_size, hidden_size)
         self.linear = torch.nn.Linear(hidden_size, vocab_size)
         
         self.softmax = torch.nn.Softmax(dim=1)
-        
-        
-
-        ###############################
-        ### Insert your code above ####
-        ###############################
+    
 
     def cell_zero_state(self, batch_size):
         """
@@ -65,10 +56,7 @@ class NeuralLanguageModel(torch.nn.Module):
 
         outputs = []
         for i in range(max_len):
-            ##############################
-            ### Insert your code below ###
-            # `output` should be the output of the network at the current timestep
-            ##############################
+            
             if i == 0:
                 ip = x_i
             else:
@@ -82,11 +70,7 @@ class NeuralLanguageModel(torch.nn.Module):
             output = self.linear(hidden)
             
             
-            #raise NotImplementedError()
-
-            ###############################
-            ### Insert your code above ####
-            ###############################
+            
             outputs.append(output)
 
         outputs = torch.stack(outputs, dim=1)
@@ -109,11 +93,6 @@ class NeuralLanguageModel(torch.nn.Module):
 
         outputs = []
         for i in range(max_len):
-            ##############################
-            ### Insert your code below ###
-            # `x_i` should be the output of the network at the current timestep
-            ##############################
-
             token = x_i
             
             em = self.embedding (token)
@@ -132,11 +111,7 @@ class NeuralLanguageModel(torch.nn.Module):
                 output = torch.multinomial(output, 1)
                 
             x_i = output.view(-1)
-                     
-
-            ###############################
-            ### Insert your code above ####
-            ###############################
+            
             outputs.append(x_i)
             if x_i == self.eos_token:
                 break
