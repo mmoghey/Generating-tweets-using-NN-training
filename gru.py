@@ -11,10 +11,6 @@ class GRUCell(torch.nn.Module):
         self.input_size = input_size
         self.hidden_size = hidden_size
 
-        ##############################
-        ### Insert your code below ###
-        # create the weight matrices and biases. Use the `torch.nn.Parameter` class
-        ##############################
         if bias_ih == True:
             self.b_ir = Parameter(torch.Tensor(hidden_size))
             self.b_in = Parameter(torch.Tensor(hidden_size))
@@ -42,11 +38,7 @@ class GRUCell(torch.nn.Module):
         self.W_iz = torch.nn.Parameter(torch.Tensor(hidden_size, input_size))
         self.W_hz = torch.nn.Parameter(torch.Tensor(hidden_size, hidden_size))
 
-        #raise NotImplementedError()
-
-        ###############################
-        ### Insert your code above ####
-        ###############################
+      
 
     def forward(self, inputs, hidden):
         """
@@ -55,11 +47,7 @@ class GRUCell(torch.nn.Module):
         :param hidden: Hidden state from the previous timestep
         :return: New hidden state
         """
-        ##############################
-        ### Insert your code below ###
-        # Perform the calculation according to the reference paper (see the README)
-        # hidden_new is the new hidden state at the current timestep
-        ##############################
+        
         w_ir = F.linear(inputs, self.W_ir, self.b_ir)
         w_hr = F.linear(hidden, self.W_hr, self.b_hr)
         r = F.sigmoid(w_ir + w_hr)
@@ -74,7 +62,4 @@ class GRUCell(torch.nn.Module):
         
         hidden_new = (1 - i) * n + i * hidden
         
-        ###############################
-        ### Insert your code above ####
-        ###############################
         return hidden_new
